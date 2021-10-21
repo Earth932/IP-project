@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+/*----- Body -----*/
+body {
+    background-color: #EEEEEE!important;
+    font-family: 'Sora', sans-serif!important;
+    line-height: 1.7;
+    color: #3A4750;
+}
+html {
+    font-size: calc(60% + 0.8vmin);
+}
+h1, h2, h3, h4, h5, h6,
+.display-4 {
+    color: #3A4750;
+}
+p {
+    font-size: 1.2rem;
+    font-weight: lighter!important;
+    opacity: 80%;
+}
+a {
+    text-decoration: none;
+}
+
+/*----- Navigation -----*/
+.navbar {
+    background-color: #303841;
+    box-shadow: 0 .8rem .8rem rgba(0, 0, 0, .2);
+}
+.logo {
+    padding: 1rem;
+    margin-left: 5rem;
+}
+
+/*----- Description -----*/
+.description {
+    width: 75%;
+    margin: 50px auto 0;
+}
+.btn {
+    display: inline-block!important;
+    border-radius: 10px!important;
+    opacity: 85%;
+    border: none!important;
+    color: #FFFFFF!important;
+    text-align: center!important;
+    padding: 10px!important;
+    transition: all 0.5s!important;
+    cursor: pointer!important;
+    margin: 5px!important;
+}
+.btn span {
+    cursor: pointer!important;
+    display: inline-block!important;
+    position: relative!important;
+    transition: 0.5s!important;
+}
+.btn span:after {
+    content: '\00bb'!important;
+    position: absolute!important;
+    opacity: 0!important;
+    top: 0!important;
+    right: -20px!important;
+    transition: 0.5s!important;
+}
+.btn:hover span {
+    padding-right: 25px!important;
+  }
+  
+.btn:hover span:after {
+    opacity: 1!important;
+    right: 0!important;
+}
+.btn1 {
+    background-color: #D72323!important;
+    font-size: 1.3rem!important;
+}
+.btn2 {
+    background-color: #3A4750!important;
+    font-size: 1.3rem!important;
+}

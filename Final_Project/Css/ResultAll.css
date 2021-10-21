@@ -1,0 +1,49 @@
+.result {
+    text-align: center;
+    width: 75%;
+    margin: 30px auto 0;
+}
+.card {
+    float: none; 
+    margin-left: 5rem;
+    margin-top: 6rem!important;
+}
+.btnr {
+    display: inline-block!important;
+    border-radius: 5px!important;
+    opacity: 80%;
+    border: none!important;
+    color: #FFFFFF!important;
+    text-align: center!important;
+    padding: 8px!important;
+    transition: all 0.5s!important;
+    cursor: pointer!important;
+    margin: 5px!important;
+}
+.btnr span {
+    cursor: pointer!important;
+    display: inline-block!important;
+    position: relative!important;
+    transition: 0.5s!important;
+}
+.btnr span:after {
+    content: '\00bb'!important;
+    position: absolute!important;
+    opacity: 0!important;
+    top: 0!important;
+    right: -20px!important;
+    transition: 0.5s!important;
+}
+.btnr:hover span {
+    padding-right: 25px!important;
+  }
+  
+.btnr:hover span:after {
+    opacity: 1!important;
+    right: 0!important;
+}
+.btnr1 {
+    background-color: #D72323!important;
+    opacity: 80%;
+    font-size: 1rem!important;
+}

@@ -1,0 +1,39 @@
+.result {
+    text-align: center;
+    width: 75%;
+    margin: 30px auto 0;
+}
+.row {
+    margin-top: 2rem!important;
+}
+.col {
+    min-width: 10rem!important;
+    max-width: auto!important;
+}
+.p-2 {
+    font-size: 1.3rem;
+    color: #EEEEEE!important;
+    background: #3A4750;
+    text-align: center;
+    border: 0.1rem solid #3A4750!important ;
+}
+.p-5 {
+    font-size: 1.2rem;
+    border: 0.1rem solid #3A4750!important ;
+    padding: 1rem!important;
+    min-height: 37rem;
+}
+.download {
+    margin-top: 1rem!important;
+    display: inline-block;
+    margin: 0 auto;
+}
+ol {
+    margin-top: -3rem!important;
+    margin-left: -2rem!important;
+    margin-right: -2rem!important;
+    margin-bottom: -2rem!important;
+}
+li {
+    margin-top: 1rem!important
+}
