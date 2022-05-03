@@ -1,0 +1,40 @@
+body {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    overflow-y: scroll; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+.banner {
+    padding-bottom: calc(2rem + (24 - 16) * ((100vw - 768px) / (1600 - 768))) !important;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+}
+
+.left {
+    left: 0;
+    background: rgb(80, 114, 167);
+    background: linear-gradient(90deg, rgba(80, 114, 167, 1) 0%, rgba(126, 164, 204, 1) 100%, rgba(175, 219, 245, 1) 100%);
+}
+
+.right {
+    right: 0;
+    background-image: url("../images/Bg_Pic.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    background-size: contain;
+    min-height: 100% !important;
+    opacity: 0.7;
+}
