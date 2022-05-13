@@ -87,7 +87,11 @@ app.get("/read/single/:email", async (req, res) => {
 app.put('/update', (req, res) => {
     const { id, firstname, lastname, id_card, address, sub_district, district, province, postal_code, tel, fax } = req.body;
     connection.query("UPDATE users SET firstname = ?, lastname = ?, id_card = ?, address = ?, sub_district = ?, district = ?, province = ?, postal_code = ?, tel = ?, fax = ? WHERE id = ?", [id, firstname, lastname, id_card, address, sub_district, district, province, postal_code, tel, fax], (err, result) => {
-        if(err)
+        if(err) {
+            console.log(err);
+        } else {
+            res.send(result);
+        }
     });
 })
 
