@@ -1,0 +1,49 @@
+.cbutton {
+    display: inline-block;
+    border-radius: 4px !important;
+    background-color: #293c6e;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: calc(12px + (20 - 16) * ((100vw - 768px) / (1600 - 768))) !important;
+    padding: calc(6px + (20 - 16) * ((100vw - 768px) / (1600 - 768))) !important;
+    width: calc(140px + (20 - 16) * ((10vw - 768px) / (1600 - 768))) !important;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.cbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.cbutton span:after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.cbutton:hover span {
+    padding-right: 15px;
+}
+
+.cbutton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.profile-button {
+    color: #ffffff !important;
+    background-color: #293c6e !important;
+    border: none;
+    margin-left: 20px;
+    width: 100px !important;
+    height: 40px !important;
+  }

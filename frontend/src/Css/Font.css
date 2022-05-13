@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
+
+h1 {
+    font-family: "Sora", sans-serif;
+    font-size: calc(38px + (24 - 16) * ((100vw - 768px) / (1600 - 768))) !important;
+    color: white;
+}
+
+h5 {
+    font-family: "Sora", sans-serif;
+    font-size: calc(12px + (24 - 18) * ((100vw - 768px) / (1600 - 768))) !important;
+    color: #3a4750;
+}
+
+p {
+    font-family: "Sora", sans-serif;
+    font-size: calc(12px + (24 - 16) * ((100vw - 768px) / (1600 - 768))) !important;
+    color: white;
+}
+
+b {
+    font-family: "Sora", sans-serif;
+    font-size: calc(10px + (20 - 16) * ((100vw - 768px) / (1600 - 768))) !important;
+    color: white;
+}
+
+li {
+    font-family: "Sora", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #3a4750 !important;
+    text-decoration: none !important;
+}
+
+a,
+label {
+  font-family: "Sora", sans-serif;
+  font-weight: 500;
+  font-size: calc(12px + (20 - 16) * ((100vw - 768px) / (1600 - 768))) !important;
+  color: #3a4750 !important;
+  text-decoration: none !important;
+}
+
+.lr {
+    font-family: "Sora", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #3a4750 !important;
+    text-decoration: none !important;
+}
+

@@ -1,5 +1,5 @@
 .img-account-profile {
-  height: 10rem;
+  height: 10rem !important;
 }
 
 .rounded-circle {
@@ -12,16 +12,16 @@
 }
 
 .card .card-header {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .card-header:first-child {
-  border-radius: 0.35rem 0.35rem 0 0;
+  border-radius: 0.35rem 0.35rem 0 0 !important;
 }
 
 .card-header {
-  padding: 1rem 1.35rem;
-  margin-bottom: 0;
+  padding: 1rem 1.35rem !important;
+  margin-bottom: 0 !important;
   background-color: rgba(33, 40, 50, 0.03);
   border-bottom: 1px solid rgba(33, 40, 50, 0.125);
 }

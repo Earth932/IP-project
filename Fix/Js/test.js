@@ -3,6 +3,7 @@ const count = document.getElementById('count')
 const type = document.getElementById('type')
 const optionButtonsElement = document.getElementById('option-buttons')
 const progressText = document.getElementById("progressText")
+const progressBarFull = document.getElementById("progressBarFull")
 
 let state = {}
 
@@ -11,13 +12,17 @@ function startQuiz() {
   showTextNode(1)
 }
 
-function showTextNode(textNodeIndex, textNodeType, textNodeCount) {
+function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   textElement.innerText = textNode.text
   const c = textNodes.count
   count.innerText = textNode.count
   const q = textNodes.type
   type.innerText = textNode.type
+  let countQuestion = parseFloat(c);
+  let allQuestion = parseFloat(q);
+  console.log(parseInt(c));
+  progressBarFull.style.width = `${(countQuestion / allQuestion) * 100}px`;
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
@@ -189,7 +194,7 @@ const textNodes = [
         nextText: 9
       },
       {
-        text: 'โปรแกรมหรือซอฟต์แวร์ + อุปกรณ์หรือเครื่องจักร',
+        text: 'โปรแกรมหรือซอฟต์แวร์ที่ควบคุมอุปกรณ์หรือเครื่องจักร',
         setState: { progress: 2 },
         nextText: 10
       },

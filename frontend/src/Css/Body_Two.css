@@ -24,13 +24,15 @@ body::-webkit-scrollbar {
 
 .left {
     left: 0;
+    z-index: 2;
     background: rgb(80, 114, 167);
     background: linear-gradient(90deg, rgba(80, 114, 167, 1) 0%, rgba(126, 164, 204, 1) 100%, rgba(175, 219, 245, 1) 100%);
 }
 
 .right {
     right: 0;
-    background-image: url("../images/Bg_Pic.png");
+    z-index: 1;
+    background-image: url("../Images/BG_Pic.png");
     background-repeat: no-repeat;
     background-position: right;
     background-attachment: fixed;
