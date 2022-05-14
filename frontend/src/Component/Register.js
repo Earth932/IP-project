@@ -6,9 +6,9 @@ import "../Css/Button.css";
 import "../Css/Font.css";
 import "../Css/Resgister.css";
 import "../Css/Profile.css";
+import Navbar from "./Navbar_Login";
 
 function Register() {
-  
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [id_card, setid_card] = useState("");
@@ -19,14 +19,12 @@ function Register() {
   const [district, setDistrict] = useState("");
   const [province, setProvince] = useState("");
   const [postal_code, setPostal_code] = useState("");
-  const [birthdate, setBirthdate] = useState("");
   const [tel, setTel] = useState("");
-  const [fax, setFax] = useState("")
   const [users, setUsers] = useState([]);
 
   const addUsers = () => {
     axios
-      .post("http://localhost:4000/create", {
+      .post("http://localhost:1000/register", {
         firstname: firstname,
         lastname: lastname,
         id_card: id_card,
@@ -37,9 +35,7 @@ function Register() {
         district: district,
         province: province,
         postal_code: postal_code,
-        birthdate: birthdate,
-        fax: fax,
-        tel: tel
+        tel: tel,
       })
       .then(() => {
         setUsers([
@@ -55,8 +51,6 @@ function Register() {
             district: district,
             province: province,
             postal_code: postal_code,
-            birthdate: birthdate,
-            fax: fax,
             tel: tel,
           },
         ]);
@@ -65,18 +59,19 @@ function Register() {
 
   return (
     <div className="Register">
-
-      <div class="d-flex justify-content-center flex-column align-items-center mtf banner">
-        <div class="col-xl-5">
-          <div class="card mb-4">
-            <div class="card-body">
+      <Navbar />
+      <div className="d-flex justify-content-center flex-column align-items-center mtf banner">
+        <div className="col-xl-5">
+          <div className="card mb-4">
+            <h5 className="card-header">สมัครบัญชีผู้ใช้</h5>
+            <div className="card-body">
               <form>
-                <div class="mb-3">
+                <div className="mb-3">
                   <label
-                    class="small mb-1"
+                    className="small text-muted"
                     htmlFor="email"
-                    className="form-label"
-                    required autofocus
+                    required
+                    autoFocus
                   >
                     อีเมล
                   </label>
@@ -87,17 +82,12 @@ function Register() {
                       setEmail(event.target.value);
                     }}
                   ></input>
-                  <div class="invalid-feedback">อีเมลไม่ถูกต้อง</div>
+                  <div className="invalid-feedback">อีเมลไม่ถูกต้อง</div>
                 </div>
 
-                <div class="row gx-3 mb-3">
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="password"
-                      className="form-label"
-                      required 
-                    >
+                <div className="row gx-3 mb-3">
+                  <div className="col-md-6">
+                    <label className="small text-muted" htmlFor="password" required>
                       รหัสผ่าน
                     </label>
                     <input
@@ -107,31 +97,26 @@ function Register() {
                         setPassword(event.target.value);
                       }}
                     ></input>
-                    <div class="invalid-feedback">รหัสผ่านไม่ถูกต้อง</div>
+                    <div className="invalid-feedback">รหัสผ่านไม่ถูกต้อง</div>
                   </div>
 
-                  <div class="col-md-6">
-                    <label class="small mb-1" for="cpassword">
+                  <div className="col-md-6">
+                    <label className="small text-muted">
                       ยืนยันรหัสผ่าน
                     </label>
                     <input
                       id="cpassword"
                       type="cpassword"
-                      class="form-control"
-                      name="cpassword"
+                      className="form-control"
                       required
                     ></input>
-                    <div class="invalid-feedback">รหัสผ่านไม่ถูกต้อง</div>
+                    <div className="invalid-feedback">รหัสผ่านไม่ถูกต้อง</div>
                   </div>
                 </div>
 
-                <div class="row gx-3 mb-3">
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="firstname"
-                      className="form-label"
-                    >
+                <div className="row gx-3 mb-3">
+                  <div className="col-md-6">
+                    <label className="small text-muted" htmlFor="firstname">
                       ชื่อ
                     </label>
                     <input
@@ -143,12 +128,8 @@ function Register() {
                     ></input>
                   </div>
 
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="lastname"
-                      className="form-label"
-                    >
+                  <div className="col-md-6">
+                    <label className="small text-muted" htmlFor="lastname">
                       นามสกุล
                     </label>
                     <input
@@ -161,32 +142,22 @@ function Register() {
                   </div>
                 </div>
 
-                <div class="row gx-3 mb-3">
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="birthdate"
-                      className="form-label"
-                    >
-                      วันเกิด
+                <div className="row gx-3 mb-3">
+                  <div className="col-md-6">
+                    <label className="small text-muted" htmlFor="tel">
+                      หมายเลขโทรศัพท์
                     </label>
                     <input
                       type="text"
-                      data-provide="datepicker"
-                      data-date-language="th-th"
                       className="form-control"
                       onChange={(event) => {
-                        setBirthdate(event.target.value);
+                        setTel(event.target.value);
                       }}
                     ></input>
                   </div>
 
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="id_card"
-                      className="form-label"
-                    >
+                  <div className="col-md-6">
+                    <label className="small text-muted" htmlFor="id_card">
                       เลขประจำตัวประชาชน
                     </label>
                     <input
@@ -198,12 +169,9 @@ function Register() {
                     ></input>
                   </div>
                 </div>
-                <div class="mb-3">
-                  <label
-                    class="small mb-1"
-                    htmlFor="address"
-                    className="form-label"
-                  >
+
+                <div className="mb-3">
+                  <label className="small text-muted" htmlFor="address">
                     ที่อยู่
                   </label>
                   <input
@@ -215,13 +183,9 @@ function Register() {
                   ></input>
                 </div>
 
-                <div class="row gx-3 mb-3">
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="province"
-                      className="form-label"
-                    >
+                <div className="row gx-3 mb-3">
+                  <div className="col-md-6">
+                    <label className="small text-muted" htmlFor="province">
                       จังหวัด
                     </label>
                     <input
@@ -233,12 +197,8 @@ function Register() {
                     ></input>
                   </div>
 
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="postal_code"
-                      className="form-label"
-                    >
+                  <div className="col-md-6">
+                    <label className="small text-muted" htmlFor="postal_code">
                       รหัสไปรษณีย์
                     </label>
                     <input
@@ -251,13 +211,9 @@ function Register() {
                   </div>
                 </div>
 
-                <div class="row gx-3 mb-3">
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="district"
-                      className="form-label"
-                    >
+                <div className="row gx-3 mb-3">
+                  <div className="col-md-6">
+                    <label className="small text-muted" htmlFor="district">
                       ตำบล/แขวง
                     </label>
                     <input
@@ -269,12 +225,8 @@ function Register() {
                     ></input>
                   </div>
 
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="sub_district"
-                      className="form-label"
-                    >
+                  <div className="col-md-6">
+                    <label className="small text-muted" htmlFor="sub_district">
                       อำเภอ/เขต
                     </label>
                     <input
@@ -287,52 +239,15 @@ function Register() {
                   </div>
                 </div>
 
-                <div class="row gx-3 mb-3">
-
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="tel"
-                      className="form-label"
-                    >
-                      หมายเลขโทรศัพท์
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      onChange={(event) => {
-                        setTel(event.target.value);
-                      }}
-                    ></input>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label
-                      class="small mb-1"
-                      htmlFor="fax"
-                      className="form-label"
-                    >
-                      โทรสาร
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      onChange={(event) => {
-                        setFax(event.target.value);
-                      }}
-                    ></input>
-                  </div>
-
-                </div>
-                <div class="text-center">
-                  <button class="cbutton" onClick={addUsers}>
+                <div className="text-center">
+                  <button className="cbutton" onClick={addUsers}>
                     <span>ลงทะเบียน</span>
                   </button>
                 </div>
               </form>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
   );

@@ -14,13 +14,6 @@
   text-decoration: underline !important;
 }
 
-.google {
-  width: 60% !important;
-  height: 60% !important;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
 .footer {
   background-color: white !important;
 }
